@@ -1,0 +1,24 @@
+operations:
+  repo_owner: UKGEPIC
+  repo_name: pro-wfm-dbs-cd
+  production_mode:
+  - action: Deploy Service
+    params:
+      GUID : GUID_STUB
+      DEPLOY: True
+      PROJECT_NAME: PROJECT_NAME_STUB
+      RELEASE_BRANCH: main
+      APP_NAME: INPUT_FOLDER_NAME
+      CONFIG_FILE_NAME: CONFIG_FILE_STUB
+  - action: Start Application
+    params:
+      GUID : GUID_STUB
+      PROJECT_NAME: PROJECT_NAME_STUB
+      RELEASE_BRANCH: main
+      APP_NAME: INPUT_FOLDER_NAME
+  - action: Enable As Production Service
+    params:
+      GUID : GUID_STUB
+      PROJECT_NAME: PROJECT_NAME_STUB
+      RELEASE_BRANCH: main
+      APP_NAME: INPUT_FOLDER_NAME

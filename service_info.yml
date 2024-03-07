@@ -1,0 +1,519 @@
+# Release: 09.06.00
+# Env: DCUS14-PRD02
+# deployment_datacenter: Europe
+# deployment_region: west4
+# NOTE: (hca_k8s, ppas_hca, dse_hca ==> applicable if deployment_datacenter: North America), pes, (rabbitmq_wfm ==> packing factor) are not deploying in this setup.
+service_info:
+    idpproxy:
+        cat_version: 09.06.00 
+        param_image_type: 09d06d00
+        param_build_number: 12
+        param_build_number_dfi: 8
+        param_build_number_ilb: 1
+        param_build_level: 09d06d00
+        param_build_level_dfi: 09d06d00
+        param_docker_build_level_ilb: 09.06.00
+        param_docker_build_level: 09.06.00
+        param_sub_value_stream_name: IAM
+    idpproxy_opendj:
+        cat_version: 09.02.00
+        param_image_type: 09d02d00
+        param_build_number: 6
+        param_build_number_dfi: 4
+        param_build_number_ilb: 1
+        param_build_level: 09d02d00
+        param_build_level_dfi: 09d02d00
+        param_docker_build_level_ilb: 09.02.00
+    tms:
+        cat_version: 09.06.00 
+        param_image_type: 09d06d00
+        param_build_number: 2
+        param_build_number_dfi: 8
+        param_build_number_ilb: 7
+        param_build_level: 09d06d00
+        param_build_level_dfi: 09d06d00
+        param_sub_value_stream_name: Extensibility
+    help:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number: 5
+        param_build_number_dfi: 8
+        param_build_number_ilb: 7
+        param_build_level: 09d06d00
+        param_build_level_dfi: 09d06d00
+        param_docker_build_level_ilb: 09.06.00
+        param_docker_build_level: 09.06.00
+        param_sub_value_stream_name: TODO
+    cis:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number: 10
+        param_build_number_dfi: 8
+        param_build_number_ilb: 7
+        param_build_level: 09d06d00
+        param_build_level_dfi: 09d06d00
+        param_sub_value_stream_name: Analytics
+    cis_mscope:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number: 10
+        param_build_number_dfi: 8
+        param_build_number_ilb: 7
+        param_build_level: 09d06d00
+        param_build_level_dfi: 09d06d00
+        param_sub_value_stream_name: Analytics
+    dsaas_k8s:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number_dfi: 8
+        param_build_level_dfi: 09d06d00
+        param_version_deployment_container_dsaas: 8d0d0d138
+        param_dbserver_admin_storage: TODO
+        param_dbname_admin_storage: TODO
+        param_dbserver_app_storage_1: TODO
+        param_dbname_app_storage_1: TODO
+        param_auth_url_idp :  TODO
+        param_tms_url: TODO
+        param_enable_logging: TODO
+        param_sub_value_stream_name: AI
+    pge_k8s:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number: latest
+        param_build_number_dfi: 8
+        param_build_level_dfi: 09d06d00
+        param_version_deployment_container_pge: 9.0.0.40
+        param_sub_value_stream_name: One Web
+    redis:
+        cat_version: 09.06.00
+        param_build_number: 8
+        param_build_level_dfi: 09d06d00
+        param_docker_build_level: 09.06.00
+        param_build_number_dfi: 8
+        param_sub_value_stream_name: WFMaaS
+        param_domain_type: other
+    redis_env:
+        cat_version: 09.06.00
+        param_build_number: 8
+        param_build_level_dfi: 09d06d00
+        param_docker_build_level: 09.06.00
+        param_build_number_dfi: 8
+        param_sub_value_stream_name: WFMaaS
+        param_domain_type: other
+    redis_ins:
+        cat_version: 09.06.00
+        param_build_number: 8
+        param_build_level_dfi: 09d06d00
+        param_docker_build_level: 09.06.00
+        param_build_number_dfi: 8
+        param_sub_value_stream_name: WFMaaS
+        param_domain_type: other
+    redis_wfm:
+        cat_version: 09.06.00
+        param_build_number: 8
+        param_build_level_dfi: 09d06d00
+        param_docker_build_level: 09.06.00
+        param_build_number_dfi: 8
+        param_sub_value_stream_name: WFMaaS
+        param_domain_type: other
+    rabbitmq_env:
+        cat_version: 09.06.00
+        param_build_number: 8
+        param_build_number_dfi: 8
+        param_build_level_dfi: 09d06d00
+        param_docker_build_level: 09.06.00
+        param_build_level: 09d06d00
+    rabbitmq:
+        cat_version: 09.06.00
+        param_build_number: 8
+        param_build_number_dfi: 8
+        param_build_level_dfi: 09d06d00
+        param_docker_build_level: 09.06.00
+        param_build_level: 09d06d00
+    rabbitmq_wfm:
+        cat_version: 09.06.00
+        param_build_number: 8
+        param_build_number_dfi: 8
+        param_build_level_dfi: 09d06d00
+        param_docker_build_level: 09.06.00
+        param_build_level: 09d06d00
+    ppas_tms_gha:
+        release_tag: develop
+        repo_name: pro-wfm-dbs-cd
+        param_build_number: 6
+        param_build_level: 09d04d00
+        service_identifier: tms
+        function_code: dbs
+        service_level: stack
+        depends_on: []
+    ppas_sdm_gha:
+        release_tag: develop
+        repo_name: pro-wfm-dbs-cd
+        param_build_number: 6
+        param_build_level: 09d04d00
+        service_identifier: shd
+        function_code: dbs
+        service_level: environment
+        depends_on: []
+    ppas_ihubdb_gha:
+        release_tag: develop
+        repo_name: pro-wfm-dbs-cd
+        param_build_number: 6
+        param_build_level: 09d04d00
+        service_identifier: int
+        function_code: dbs
+        service_level: environment
+        depends_on: []
+    ppas_ecs_gha:
+        release_tag: develop
+        repo_name: pro-wfm-dbs-cd
+        param_build_number: 6
+        param_build_level: 09d04d00
+        service_identifier: ecs
+        function_code: dbs
+        service_level: instance
+        depends_on: []
+    ppas_hca_gha:
+        release_tag: develop
+        repo_name: pro-wfm-dbs-cd
+        param_build_number: 6
+        param_build_level: 09d04d00
+        service_identifier: hca
+        function_code: dbs
+        service_level: instance
+        depends_on:
+        - ppas_ecs_gha
+        - ppas_workflow_gha
+    ppas_workflow_gha:
+        release_tag: develop
+        repo_name: pro-wfm-dbs-cd
+        param_build_number: 6
+        param_build_level: 09d04d00
+        service_identifier: wfl
+        function_code: dbs
+        service_level: instance
+        depends_on: []
+    ppas_rpt_gha:
+        release_tag: develop
+        repo_name: pro-wfm-dbs-cd
+        param_build_number: 6
+        param_build_level: 09d04d00
+        service_identifier: rpt
+        function_code: dbs
+        service_level: instance
+        depends_on: []
+    ppas_udm_gha:
+        release_tag: develop
+        repo_name: pro-wfm-dbs-cd
+        param_build_number: 6
+        param_build_level: 09d04d00
+        service_identifier: udm
+        function_code: dbs
+        service_level: instance
+        depends_on:
+        - ppas_rpt_gha
+        - ppas_workflow_gha
+    ppas_wfm_gha:
+        release_tag: develop
+        repo_name: pro-wfm-dbs-cd
+        param_build_number: 6
+        param_build_level: 09d04d00
+        service_identifier: wfm
+        function_code: dbs
+        service_level: wfm
+        depends_on: []
+    ppas_wfm_skpi_gha:
+        release_tag: develop
+        repo_name: pro-wfm-dbs-cd
+        param_build_number: 6
+        param_build_level: 09d04d00
+        service_identifier: skp
+        function_code: dbs
+        service_level: skp
+        depends_on: []
+    ppas_wit_gha:
+        release_tag: develop
+        repo_name: pro-wfm-dbs-cd
+        param_build_number: 6
+        param_build_level: 09d04d00
+        service_identifier: wit
+        function_code: dbs
+        service_level: environment
+        depends_on: []
+    ihub_db:
+        cat_version: 09.04.00
+    wfm_db:
+        cat_version: 09.04.00
+    wfm_db_skpi:
+        cat_version: 09.04.00
+    tr:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number: 12
+        param_build_number_dfi: 8
+        param_build_level: 09d06d00
+        param_build_level_dfi: 09d06d00
+        param_sub_value_stream_name: IAM
+    apigee_dsms:
+        cat_version: 09.06.00
+        param_build_number: 7
+        param_build_number_dfi: 8
+        param_build_number_ilb: 7
+        param_build_level: 09d06d00
+        param_build_level_dfi: 09d06d00
+        param_docker_build_level_ilb: 09.06.00
+        param_docker_build_level: 09.06.00
+        param_sub_value_stream_name: Extensibility
+    apigee_rmp:
+        cat_version: 09.06.00
+        param_build_number: 7
+        param_build_number_dfi: 8
+        param_build_number_ilb: 7
+        param_build_level: 09d06d00
+        param_build_level_dfi: 09d06d00
+        param_docker_build_level_ilb: 09.06.00
+        param_docker_build_level: 09.06.00
+        param_sub_value_stream_name: Extensibility
+    opscenter:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number: 3
+        param_build_level: 09d06d00
+        param_sub_value_stream_name: Reporting
+    authn_k8s:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_level: 09d06d00
+        param_build_number: 7
+        param_build_level_dfi: 09d06d00
+        param_build_number_dfi: 8
+        param_build_level_dma: 09d06d00
+        param_build_number_dma: 6
+        param_build_level_nginx_ic: 09d06d00
+        param_build_number_nginx_ic: 2
+        param_cs_replicas: 3
+        param_us_replicas: 3
+        param_ts_replicas: 3
+        param_replserver_replicas: 3
+        param_replserver_cs_replicas: 3
+        param_am_min_replicas: 3
+        param_am_max_replicas: 6
+        param_ha_nginx_ic: True
+        param_global_repl_on: True
+        param_sub_value_stream_name: IAM
+    ums:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number: 5
+        param_build_number_dfi: 8
+        param_build_level: 09d06d00
+        param_build_level_dfi: 09d06d00
+        param_sub_value_stream_name: IAM
+    sdm:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number: 8
+        param_build_number_dfi: 8
+        param_build_level_dfi: 09d06d00
+        param_build_level: 09d06d00
+        param_image_type: 09d06d00
+        param_sub_value_stream_name: WFMaaS
+    pes:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number: 7
+        param_build_number_dfi: 8
+        param_build_level: 09d06d00
+        param_build_level_dfi: 09d06d00
+        param_instance_id: '01'
+        param_pes_clr_api_build: 09d06d00
+        param_pes_clr_api_build_number: 6
+        param_pes_clr_api_concurrency: 20
+        param_pes_clr_api_cpu: 2
+        param_pes_clr_api_memory: 1Gi
+        param_pes_clr_api_mininst_region1: 1
+        param_pes_clr_api_mininst_region2: ''
+        param_pes_clr_api_region1: ''
+        param_pes_clr_api_region2: ''
+        param_pes_datastore_region: ''
+        param_pes_function_memory: 256MB
+        param_pes_function_region1: ''
+        param_pes_function_region2: ''
+        param_pes_function_timeout: 300s
+        param_pes_reset_scheduler_schedule: 0 0 * * *
+        param_pes_datastorebackup_scheduler_schedule: 0 * * * *
+        param_pes_cleanup_scheduler_schedule: 0 0 1 * *
+        param_pes_resource_identifier: '01'
+        param_pes_appengine_region: ''
+        param_pes_project_id_suffix: ''
+        param_sub_value_stream_name: Timekeeping
+    astra:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number: 3
+        param_build_level: 09d06d00
+        param_build_number_dfi: 8
+        param_build_level_dfi: 09d06d00
+        param_subnet: Database
+        param_enable_monitoring : True
+        param_astra_secondary_region: TODO
+        param_build_number_astra_validator: 2
+        param_build_number_astra_zdm: 3
+        param_build_level_astra_validator: 09d06d00
+        param_build_level_astra_zdm: 09d06d00
+        param_sub_value_stream_name: Reporting
+    wit_k8s:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_level: 09d06d00
+        param_build_number: 14
+        param_build_level_dfi: 09d06d00 
+        param_build_number_dfi: 8
+        param_build_level_dmw : 09d06d00
+        param_build_number_dmw : 4
+        param_max_replicas: 6
+        param_min_replicas: 4
+        param_sub_value_stream_name: Suite Serviceability
+    ecs_k8s:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_level: 09d06d00
+        param_build_number: 5
+        param_build_level_dfi: 09d06d00
+        param_build_number_dfi: 8
+        param_build_level_dme: 09d06d00
+        param_build_number_dme: 5
+        param_max_replicas: 5
+        param_min_replicas: 3
+        param_sub_value_stream_name: Suite Services
+    ihub_k8s:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_level: 09d06d00
+        param_build_number: 6
+        param_build_level_dfi: 09d06d00
+        param_build_number_dfi: 8
+        param_build_level_dmi: 09d06d00
+        param_build_number_dmi: 6
+        param_max_replicas: 16
+        param_min_replicas: 10
+        param_sub_value_stream_name: Integration
+    hca_k8s:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_level: 09d06d00
+        param_build_number: 3
+        param_build_level_dfi: 09d06d00 
+        param_build_number_dfi: 8
+        param_build_level_dmh: 09d06d00
+        param_build_number_dmh: 4
+        param_sub_value_stream_name: Reporting
+    udm:
+        cat_version: 09.06.00
+        param_build_number: 10
+        param_build_number_dfi: 8
+        param_build_number_ilb: 8
+        param_build_number_ssl_ol: 2
+        param_build_level: 09d06d00
+        param_build_level_dfi: 09d06d00
+        param_build_level_ssl_ol: 09d06d00
+        param_sub_value_stream_name: Data Collection
+    birt_ihub_ic:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number: 2
+        param_build_number_dfi: 8
+        param_build_number_ilb: 7
+        param_build_level: 09d06d00
+        param_build_level_dfi: 09d06d00
+        param_docker_build_level_ilb: 09.06.00
+        param_sub_value_stream_name: Reporting
+    birt_ihub_engine:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number: 2
+        param_build_number_dfi: 8
+        param_build_level: 09d06d00
+        param_build_level_dfi: 09d06d00
+        param_community_num_nodes: 1
+        param_hca_small_num_nodes: 4
+        param_large_num_nodes: 4
+        param_small_num_nodes: 4
+        param_sub_value_stream_name: Reporting
+    birt_sysconsole:
+        cat_version: 09.02.00
+        param_image_type: 09d02d00
+        param_build_number: 3
+        param_build_number_dfi: 6
+        param_build_level: 09d02d00
+        param_build_level_dfi: 09d02d00
+    workflow_admin:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number: 4
+        param_build_number_dfi: 8
+        param_build_number_ilb: 1
+        param_build_level: 09d06d00
+        param_build_level_dfi: 09d06d00
+        param_docker_build_level_ilb: 09.06.00
+        param_sub_value_stream_name: Business Process Enablement
+    workflow_app:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number: 2
+        param_build_number_dfi: 8
+        param_build_number_ilb: 1
+        param_build_level: 09d06d00
+        param_build_level_dfi: 09d06d00
+        param_docker_build_level_ilb: 09.06.00
+        param_sub_value_stream_name: Business Process Enablement
+    bcc:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number: 10
+        param_build_number_dfi: 8
+        param_build_level: 09d06d00
+        param_datastx_cluster_mode: ENTERPRISE
+        param_sub_value_stream_name: Forecasting
+    dse_forecasting:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number: 2
+        param_build_number_ilb: 7
+        param_build_number_dfi: 8
+        param_build_level: 09d06d00
+        param_build_level_dfi: 09d06d00
+        param_docker_build_level_ilb: 09.06.00
+        param_sub_value_stream_name: Forecasting
+    dse_hca:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number: 3
+        param_build_level: 09d06d00
+        param_sub_value_stream_name: Reporting
+    dse_batch_wfm:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number: 3
+        param_build_level: 09d06d00
+        param_sub_value_stream_name: Reporting
+    dse_realtime_wfm:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number: 3
+        param_build_level: 09d06d00
+        param_sub_value_stream_name: Reporting
+    wfm:
+        cat_version: 09.06.00
+        param_image_type: 09d06d00
+        param_build_number_frontend: 8
+        param_build_number_backend: 8
+        param_build_number_dfi: 8
+        param_build_number_ilb: 11
+        param_build_level_frontend: 09d06d00
+        param_build_level_backend: 09d06d00
+        param_build_level_dfi: 09d06d00
+        param_docker_build_level_ilb: 09.06.00
+        param_build_level: 09d06d00
+        param_external_disk_size: 1000
+        param_sub_value_stream_name: WFMaaS
